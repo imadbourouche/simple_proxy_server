@@ -13,10 +13,10 @@ COPY requirements.txt /app/requirements.txt
 
 RUN pip install -r requirements.txt
 
-COPY ./myproxy.py .
+COPY ./proxy.py .
 
 COPY ./colored_logging.py .
 
 EXPOSE 1234
 
-CMD [ "python", "myproxy.py", "-mc", "10" ,"-bs","8192"]
+CMD [ "python", "proxy.py", "-mc", "10" ,"-bs","8192"]
